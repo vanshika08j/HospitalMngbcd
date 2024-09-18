@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
+import HomePage from './Components/HomePage';
+import PatientPage from './Components/PatientPage';
+import AppointmentPage from './Components/AppointmentPage';
+import DoctorPage from './Components/DoctorPage';
+import DepartmentPage from './Components/DepartmentPage';
+import MedicalHistoryPage from './Components/MedicalHistoryPage';
+import UserPage from './Components/Userpage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage/>}></Route>
+        <Route path="/patients" element={<PatientPage/>}></Route>
+        <Route path="/doctors" element={<DoctorPage/>}></Route>
+        <Route path="/medical-history" element={<MedicalHistoryPage/>}></Route>
+        <Route path="/appointments" element={<AppointmentPage/>}></Route>
+        <Route path="/departments" element={<DepartmentPage/>}></Route>
+        <Route path="/user" element={<UserPage/>}></Route>
 
-export default App;
+      </Routes>
+    </Router>
+  );
+};
+
+export default App

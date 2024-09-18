@@ -3,15 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@svgr/plugin-svgo": "^8.1.0",
+    "@svgr/webpack": "^8.1.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "postcss": "^8.4.43",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.26.1",
+    "react-scripts": "^3.0.1",
+    "resolve-url-loader": "^5.0.0",
+    "svgo": "^3.3.2",
     "web-vitals": "^2.1.4"
   },
+  "resolutions": {
+    "@svgr/plugin-svgo": "^8.1.0",
+    "@svgr/webpack": "^8.1.0",
+    "nth-check": "^2.0.1",
+    "css-select": "^4.1.1",
+    "svgo": "^3.3.2",
+    "postcss": "^8.4.43",
+    "resolve-url-loader": "^5.0.0",
+    "react-scripts": "^5.0.1"
+  },
   "scripts": {
+    "preinstalled": "npx npm-force-resolutions",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
